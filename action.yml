@@ -1,5 +1,5 @@
-name: Update and Write Properties
-description: update properties values
+name: Update Property value
+description: update properties value
 author: Anbazhagan Natarajan
 branding:
   icon: 'edit'
