@@ -18,6 +18,10 @@ This is a GitHub action to write values to `.properties` files.
 
 **Required** The value of the given property or properties, in the same order. It accepts array of values. ex, value1, value2, value3
 
+### `replace_token`
+
+**Optional** The property values to replace special char. example, if the secrets contains EQUALTO and if you would like to replace as = then pass EQUALTO:= this will replace EQUALTO occurances in values and replace with =
+
 ## Example usage
 
     - name: Write value to Properties-file
@@ -28,6 +32,8 @@ This is a GitHub action to write values to `.properties` files.
           key1,key2,key3
         value: |
           value1,value2,value3
+        replace_token: |
+          EQUALTO:=,DOLLAR:$
 
 # License
 The scripts and documentation in this project are released under the [MIT License](LICENSE)
