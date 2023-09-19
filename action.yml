@@ -14,6 +14,9 @@ inputs:
   values:
     description: 'The property values you want to write (same order as the keys). Accepts an array using comma separator.'
     required: true
+  replace_tokens:
+    description: 'The property values to replace special char. example, if the secrets contains EQUALTO and if you would like to replace as = then pass EQUALTO:= this will replace EQUALTO occurances in values and replace with =' 
+    required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -21,3 +24,4 @@ runs:
     - ${{ inputs.source_path }}
     - ${{ inputs.properties }}
     - ${{ inputs.values }}
+    - ${{ inputs.replace_tokens }}
