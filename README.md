@@ -33,7 +33,7 @@ This is a GitHub action to write values to `.properties` files.
         value: |
           value1,value2,value3
         replace_token: |
-          EQUALTO:=,DOLLAR:$
+          token1,token2
 
 # License
 The scripts and documentation in this project are released under the [MIT License](LICENSE)
